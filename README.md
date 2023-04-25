@@ -6,7 +6,6 @@ TalkingPages is a convenient Chrome extension that converts selected text on a w
 
 - Easy-to-use Chrome extension for converting selected text to speech
 - Integration with the Eleven Labs text-to-speech API
-- Customizable settings for API key and voice ID
 - Efficient and accessible way to consume written content on webpages
 
 ## Installation 🔧
@@ -19,10 +18,26 @@ TalkingPages is a convenient Chrome extension that converts selected text on a w
 ## Usage 🚀
 
 1. Click on the TalkingPages extension icon in the Chrome toolbar.
-2. Enter your Eleven Labs API key and voice ID, then click the "Save Settings" button. 🔑
-3. Select some text on a webpage. 🖱️
-4. Click the "Play Selected Text" button in the extension popup. 🎧
-5. Listen to the selected text as it is read aloud, providing an efficient and accessible way to consume content.
+2. Open the `popup.js` file located in the `src` directory of the extension files in a text editor.
+3. Locate the following lines of code in `popup.js`:
+   ```javascript
+   const apiKey = "";
+   const voiceId = "";
+   ```
+4. Enter your Eleven Labs API key between the quotes for `apiKey` and your desired voice ID for `voiceId`. For example:
+   ```javascript
+   const apiKey = "your-api-key-here";
+   const voiceId = "fr-FR-Standard-A";
+   ```
+5. Save the `popup.js` file.
+6. Open Chrome and navigate to `chrome://extensions`.
+7. Enable "Developer mode" using the toggle in the top right corner.
+8. Click "Load unpacked" and select the folder containing the extension files.
+9. Select some text on a webpage. 🖱️
+10. Click the "Play Selected Text" button in the extension popup. 🎧
+11. Listen to the selected text as it is read aloud, providing an efficient and accessible way to consume content.
+
+If you don't have an Eleven Labs API key, you can sign up for one [here](https://www.eleven-labs.com/en/text-to-speech-api/).
 
 ## Roadmap 🗺️
 

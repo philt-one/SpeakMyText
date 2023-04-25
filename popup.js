@@ -1,6 +1,6 @@
 const playText = async (text) => {
-  const voiceId = "VOICE_ID"; // Replace with the desired voice ID
   const apiKey = "API_KEY"; // Replace with your API key
+  const voiceId = "VOICE_ID"; // Replace with the desired voice ID
 
   const requestBody = {
     text,
