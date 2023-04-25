@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Text to Speech Extension",
+  "version": "1.0",
+  "description": "Select text and play it as audio.",
+  "permissions": ["activeTab", "https://api.elevenlabs.io/"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Text to Speech"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ]
+}
